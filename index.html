@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="pics/icon/snake.png">
+    </head>
+
+    <body onload="newFacts()">
+        <div class="navBar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="venom.html">Venomous</a></li>
+                <li><a href="no_venom.html">Non-Venomous</a></li>
+            </ul>
+        </div>
+
+        <div class="homeContent">
+            <h1>Did you know?</h1>
+            <!--
+                <p>
+                    They smell with their tongues.
+                    Snakes do have nostrils, but they don’t use them to smell. 
+                    Instead they have evolved to smell with their tongue and by using their Jacobson’s organ in the roof of their mouth. 
+                    Their smell is quite excellent and has also been described as “smelling in stereo”. 
+                    They have a forked tongue and multiple receptors able to pick up different amounts of chemical cues.
+                </p>
+            -->
+            <p id="facts"></p>
+        </div>
+
+        <script>
+            function newFacts(){
+                var facts = [
+                            'They smell with their tongues. Snake do have nostrils, but they don\'t use them to smell. '+
+                                'Instead they have evolved to smell with their tongue and by using their Jacobson’s organ in the roof of their mouth. '+
+                                'Their smell is quite excellent and has also been described as “smelling in stereo”. '+
+                                'They have a forked tongue and multiple receptors able to pick up different amounts of chemical cues.',
+                            'According to the latest count, there are 3,789 snake species, making them the second largest group of reptiles after lizards.'+
+                                'They are divided into 30 different families and numerous subfamilies. Australia is home to approximately 140 of them.',
+                            'Not all lay eggs. You might have learned in school that reptiles are different from mammals because they lay eggs. '+
+                                'While we like to classify and categorize everything around us, nature has its own rules. '+
+                                'While approximately 70% of snakes lay eggs, others don’t. '+
+                                'Snakes living in especially colder climates have live births because the eggs wouldn’t survive outside.'
+                            ];
+                var randomFact = Math.floor(Math.random() * facts.length);
+                document.getElementById('facts').innerHTML = facts[randomFact];
+            }
+        </script>
+
+    </body>
+</html>
